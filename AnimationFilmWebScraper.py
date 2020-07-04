@@ -239,13 +239,15 @@ def text_no_films_notification():
 
 #############################################EXECUTABLE/MAIN Section#######################################################################################################################################################################################
 
-films_available = check_for_films()
+if __name__ == "__main__":
 
-if films_available:
-	
-	extract_film_information()
-	text_film_information(filmdata)
+	films_available = check_for_films()
 
-else:
+	if films_available:
+		
+		extract_film_information()
+		text_film_information(filmdata)
 
-	text_no_films_notifcation()
+	else:
+
+		text_no_films_notifcation()
